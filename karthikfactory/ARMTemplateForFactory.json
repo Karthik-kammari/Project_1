@@ -79,7 +79,7 @@
 								"referenceName": "git_source_ds",
 								"type": "DatasetReference",
 								"parameters": {
-									"filename": "sales_teams.csv"
+									"filename": "sales_pipeline.csv"
 								}
 							}
 						],
