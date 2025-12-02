@@ -1,0 +1,22 @@
+{
+	"name": "git_source_ds",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "git_source_ls",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": "Karthik-kammari/Project_1/accounts.csv"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
