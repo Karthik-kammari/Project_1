@@ -1,0 +1,9 @@
+{
+	"name": "karthikfactory",
+	"location": "eastus2",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "44123ed2-6d4a-443c-b9af-b34c257faf7d",
+		"tenantId": "7c2c3a12-4ac8-4751-9b2b-d8a2ec72c90e"
+	}
+}
