@@ -49,7 +49,10 @@
 				"inputs": [
 					{
 						"referenceName": "git_source_ds",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"filename": "sales_teams.csv"
+						}
 					}
 				],
 				"outputs": [
