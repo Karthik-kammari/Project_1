@@ -5,14 +5,8 @@
 		"factoryName": {
 			"value": "karthikfactory"
 		},
-		"GitHub_source_ls_credential": {
-			"value": ""
-		},
 		"bronze_dest_ls_accountKey": {
 			"value": ""
-		},
-		"GitHub_source_ls_properties_typeProperties_username": {
-			"value": "Karthik-kammari"
 		},
 		"bronze_dest_ls_properties_typeProperties_url": {
 			"value": "https://karthikdata.dfs.core.windows.net/"

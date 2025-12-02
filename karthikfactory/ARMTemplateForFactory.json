@@ -7,17 +7,9 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "karthikfactory"
 		},
-		"GitHub_source_ls_credential": {
-			"type": "secureString",
-			"metadata": "Secure string for 'credential' of 'GitHub_source_ls'"
-		},
 		"bronze_dest_ls_accountKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'bronze_dest_ls'"
-		},
-		"GitHub_source_ls_properties_typeProperties_username": {
-			"type": "string",
-			"defaultValue": "Karthik-kammari"
 		},
 		"bronze_dest_ls_properties_typeProperties_url": {
 			"type": "string",
@@ -86,7 +78,9 @@
 							{
 								"referenceName": "git_source_ds",
 								"type": "DatasetReference",
-								"parameters": {}
+								"parameters": {
+									"filename": "sales_teams.csv"
+								}
 							}
 						],
 						"outputs": [
@@ -144,12 +138,20 @@
 					"referenceName": "git_source_ls",
 					"type": "LinkedServiceReference"
 				},
+				"parameters": {
+					"filename": {
+						"type": "string"
+					}
+				},
 				"annotations": [],
 				"type": "DelimitedText",
 				"typeProperties": {
 					"location": {
 						"type": "HttpServerLocation",
-						"relativeUrl": "accounts.csv"
+						"relativeUrl": {
+							"value": "@dataset().filename",
+							"type": "Expression"
+						}
 					},
 					"columnDelimiter": ",",
 					"escapeChar": "\\",
@@ -161,24 +163,6 @@
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/linkedServices/git_source_ls')]"
 			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/GitHub_source_ls')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "GitHub",
-				"typeProperties": {
-					"username": "[parameters('GitHub_source_ls_properties_typeProperties_username')]",
-					"credential": {
-						"type": "SecureString",
-						"value": "[parameters('GitHub_source_ls_credential')]"
-					},
-					"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDAzRUZGMjI1LTNGMzEtNDEzQy1BMUU4LUQ2RjRERDZDRDk2RV8xYTMwMmRmNi1iMWFmLTRiMWUtOGIzZC1hOTI3ZmFhYjdiZjMiDQp9"
-				}
-			},
-			"dependsOn": []
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/bronze_dest_ls')]",
