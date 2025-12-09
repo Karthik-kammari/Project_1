@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "pro1factadf1"
+		},
+		"adls_bronze_ls_accountKey": {
+			"value": ""
+		},
+		"localfile_ls_password": {
+			"value": ""
+		},
+		"adls_bronze_ls_properties_typeProperties_url": {
+			"value": "https://karthikdata1.dfs.core.windows.net/"
+		},
+		"localfile_ls_properties_typeProperties_host": {
+			"value": "C:\\Users\\karth\\Desktop\\Project_1"
+		},
+		"localfile_ls_properties_typeProperties_userId": {
+			"value": "karthikchary64@gmail.com"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
