@@ -1,0 +1,9 @@
+{
+	"name": "pro1factadf1",
+	"location": "eastus2",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "55a685fa-584b-4f98-a4bb-6a9b855d3069",
+		"tenantId": "7e7272df-6bf0-47d7-9d76-9b0ba60e610f"
+	}
+}
