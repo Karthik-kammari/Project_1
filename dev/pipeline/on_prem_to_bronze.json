@@ -214,8 +214,6 @@
 			{
 				"name": "products",
 				"type": "Copy",
-				"state": "Inactive",
-				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "data dict copy",
